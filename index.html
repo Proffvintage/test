@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    <meta charset="UTF-8">
+ <meta name="port" content="=device-width initial-scale=.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">forgot your password?</a>
+                <button>Sign in</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel ov-left">
+                    <h1>Welcome home</h1>
+                    <p>To meet the family Please Log in with your info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel ov-right">
+                    <h1>Hello, Mother Sucker</h1>
+                    <p>Enter your personal details</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
