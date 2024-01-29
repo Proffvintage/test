@@ -1,84 +1,113 @@
 @import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
 
-:root{
-    --bg: #222;
-    --clr: #fff;
-}
-ul{
-    position: relative;
-    display: flex;
-    gap: 50px;
-}
-li{
-    position: relative;
-    list-style: none;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.5s;
-}
-li::before{
-    content: '';
-    position: absolute;
-    inset: 30px;
-    box-shadow: 
-    0 0 0 10px var(--clr),
-    0 0 0 20px var(--clr),
-    0 0 0 30px var(--bg);
-    transition: 0.5s;
-}
-li::after{
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--bg);
-    transform: rotate(45deg);
-    transition: 0.5s;
-}
-li:hover::before{
-    inset: 15px;
-}
-li:hover::after{
-    inset: 0px;
-    transform: rotate(0deg);
-}
-li:hover a i{
-    color: var(--clr);
-    transform: translateY(-40%);
+:root {
+  --bg: #222;
+  --clr: #fff;
 }
 
-a{
-    position: relative;
-    z-index: 10;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ul {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
 }
-a i{
-    opacity:0.4;
-    color: var(--clr);
-    font-size: 2em;
-    transition: 0.5s;
+
+li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
 }
-a span{
-    position: absolute;
-    color: var(--clr);
-    font-family: sans-serif;
-    transition: 0.5s;
-    transform: scale(0) translateY(200%);
-    opacity: 0;
+
+li::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0 0 0 10px var(--clr), 0 0 0 20px var(--clr), 0 0 0 30px var(--bg);
+  transition: 0.5s;
 }
-ul li:hover a span{
-    opacity: 0.4;
-    transform: scale(1) translateY(100%);
+
+li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  transform: rotate(45deg);
+  transition: 0.5s;
 }
+
+li:hover::before {
+  inset: 15px;
+}
+
+li:hover::after {
+  inset: 0px;
+  transform: rotate(0deg);
+}
+
+li:hover a i {
+  color: var(--clr);
+  transform: translateY(-40%);
+}
+
+a {
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a i {
+  opacity: 0.4;
+  color: var(--clr);
+  font-size: 2em;
+  transition: 0.5s;
+}
+
+a span {
+  position: absolute;
+  color: var(--clr);
+  font-family: sans-serif;
+  transition: 0.5s;
+  transform: scale(0) translateY(200%);
+  opacity: 0;
+}
+
+ul li:hover a span {
+  opacity: 0.4;
+  transform: scale(1) translateY(100%);
+}
+
 li:hover a i,
-li a span{
-    filter: drop-shadow(0 0 20px var(--clr))
-            drop-shadow(0 0 40px var(--clr))
-            drop-shadow(0 0 60px var(--clr));
-} 
+li a span {
+  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr))
+    drop-shadow(0 0 60px var(--clr));
+}
+
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  li::before,
+  li::after {
+    content: none;
+  }
+
+  a i {
+    font-size: 1.5em;
+  }
+}
